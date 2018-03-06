@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Node App</title>
+		<link rel="stylesheet" href="/assets/style.css" type="text/css" />
+	</head>
+	<body>
+		<% include partials/nav.ejs %>
+		<h1>Welcome <%= name %>!!</h1>
+		<p><strong>Age: </strong> <%= data.age %></p>
+    <p><strong>Job: </strong> <%= data.job %></p>
+		<h2>Hobbies : </h2>
+		<ul>
+			<% data.hobbies.forEach((item)=>{%>
+				<li><%= item %></li>
+				<!-- we should use <%= %> only when displaying data and while writing the logic we should use <% %> -->
+			<% });%>
+		</ul>
+	</body>
+</html>
